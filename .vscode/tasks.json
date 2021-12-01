@@ -1,0 +1,22 @@
+{
+    "version":"2.0.0",
+    "tasks":[
+        {
+            "label":"compile",
+            "type":"shell",
+            "command":"mvn -B clean install",
+            "group":"build"
+        },
+        {
+            "label":"run",
+            "type":"shell",
+            "command":"cd C:/Users/Utilisateur/OneDrive/Bureau/3ème année ISIS/Java/demo/target && java -jar demo-1.0-SNAPSHOT.jar",
+            "group":"test"
+        },
+        {
+            "label":"build and run",
+            "dependsOn":["compile","run"],
+            "dependsOrder": "sequence"
+        },
+    ]
+}
